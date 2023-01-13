@@ -1,13 +1,61 @@
 //load fonts
+/* mulish-400 */
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/mulish-v12-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/mulish-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/mulish-v12-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/mulish-v12-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/mulish-v12-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/mulish-v12-latin-regular.svg#Mulish') format('svg');
+    /* Legacy iOS */
+}
+
+/* mulish-700 */
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/mulish-v12-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/mulish-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/mulish-v12-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/mulish-v12-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/mulish-v12-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/mulish-v12-latin-700.svg#Mulish') format('svg');
+    /* Legacy iOS */
+}
 
 //fonts
+$Mulish: 'Mulish',
+sans-serif;
 
 //colors
 $white: #ffffff;
 $black: #000000;
+$color01: #0087fe26;
+$color02: #0087fe33;
+$color03: #0088ff00;
+$color04: #0087fe00;
+$color05: #1f1f1d;
+$color06: #0087fe;
+$color07: #5f5f5c;
 
 html {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 body {
@@ -15,25 +63,27 @@ body {
 }
 
 p {
-    //font-family: $Gudea;
+    font-family: $Mulish;
     font-size: 1rem;
+    line-height: 1.429;
     font-weight: 400;
-    //color: $color01;
+    color: $color07;
     margin-bottom: 0;
 }
 
 a {
-    //font-family: $Gudea;
+    font-family: $Mulish;
     font-size: 1rem;
+    line-height: 1.429;
     font-weight: 400;
-    //color: $color01;
+    color: $color07;
     word-wrap: break-word;
     text-decoration: none;
     margin-bottom: 0;
 
     &:hover {
-        //color: $color02;
+        color: $color06;
     }
 
-    transition: all 0.33s;
+    transition: color 0.33s;
 }

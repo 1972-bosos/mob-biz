@@ -2,6 +2,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     watch: true,
+    watchOptions: {
+        aggregateTimeout: 500,
+        ignored: /node_modules/
+    },
     entry: {
         app: [
             "./src/app.scss",

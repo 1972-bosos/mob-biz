@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-	<main id="content" class="site-content">
+	<main class="content page__content">
 		<div class="container">
 			INDEX CONTENT
 		</div>

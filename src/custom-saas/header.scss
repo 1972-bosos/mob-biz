@@ -1,0 +1,65 @@
+.page__header {
+    background: radial-gradient(35.21% 43.76% at 5.1% 7.01%, $color01 0%, $color02 0%, $color03 100%), radial-gradient(27.36% 45.53% at 90.42% 60.07%, $color02 0%, $color04 100%), $color05;
+    padding-top: 28px;
+
+    .navbar {
+        padding: 0;
+
+        .custom-logo-link {
+            .custom-logo {
+                width: auto;
+                height: 40px;
+            }
+        }
+
+        .navbar-toggler {}
+
+        .collapse {
+            .navbar-nav {
+                .menu-item {
+                    align-self: center;
+                    margin-right: 25px;
+
+                    a {
+                        font-weight: 700;
+                        color: $white;
+
+                        &:hover {
+                            color: $color06;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                .current-menu-item{
+                    a {
+                        color: rgba($color06, .75);
+                        pointer-events: none;
+                    }
+                }
+
+                .link {
+                    border: 1px solid $white;
+                    padding: 10px 20px;
+                    margin-left: 50px;
+                    transition: background-color 0.33s;
+
+                    a {
+                        font-size: 1.143rem;
+                        line-height: 1.5;
+
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgba($color06, .25);
+                    }
+                }
+            }
+        }
+    }
+}
