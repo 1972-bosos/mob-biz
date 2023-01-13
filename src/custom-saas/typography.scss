@@ -1,0 +1,39 @@
+//load fonts
+
+//fonts
+
+//colors
+$white: #ffffff;
+$black: #000000;
+
+html {
+    font-size: 18px;
+}
+
+body {
+    min-width: 320px;
+}
+
+p {
+    //font-family: $Gudea;
+    font-size: 1rem;
+    font-weight: 400;
+    //color: $color01;
+    margin-bottom: 0;
+}
+
+a {
+    //font-family: $Gudea;
+    font-size: 1rem;
+    font-weight: 400;
+    //color: $color01;
+    word-wrap: break-word;
+    text-decoration: none;
+    margin-bottom: 0;
+
+    &:hover {
+        //color: $color02;
+    }
+
+    transition: all 0.33s;
+}
