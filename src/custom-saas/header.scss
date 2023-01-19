@@ -4,6 +4,7 @@
 
     .navbar {
         padding: 0;
+        margin-bottom: 22px;
 
         .custom-logo-link {
             .custom-logo {
@@ -33,7 +34,8 @@
                         margin-right: 0;
                     }
                 }
-                .current-menu-item{
+
+                .current-menu-item {
                     a {
                         color: rgba($color06, .75);
                         pointer-events: none;
@@ -61,5 +63,104 @@
                 }
             }
         }
+    }
+
+    .header__content {
+        .content__text {
+            position: relative;
+
+            .text__box {
+                position: absolute;
+                bottom: 162px;
+
+                h1 {
+                    color: $white;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    width: 80%;
+                    font-size: 1.143rem;
+                    line-height: 1.5;
+                    color: rgba($white, .72);
+                    letter-spacing: 0.2px;
+                    margin-bottom: 48px;
+                }
+
+                .content__bar {
+                    display: flex;
+                    align-items: center;
+
+                    .bar__button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 138px;
+                        height: 48px;
+                        font-size: 1.143rem;
+                        font-weight: 700;
+                        line-height: 1.5;
+                        color: $white;
+                        background-color: $color06;
+                        border-radius: 2px;
+                        padding: 12px 24px;
+                        margin-right: 32px;
+                        transition: background-color 0.33s;
+
+                        &:hover {
+                            background-color: rgba($color06, .75);
+                            animation: heartbeat 1.5s ease-in-out both;
+                        }
+                    }
+
+                    .bar__phone {
+                        font-size: 1.143rem;
+                        font-weight: 700;
+                        line-height: 1.2;
+                        color: $white;
+                        letter-spacing: 0.2px;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $color06;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content__image {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+//animations
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
     }
 }

@@ -40,4 +40,33 @@
     			</div>
   			</div>
 		</nav>
+		<div class="header__content">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 content__text">
+						<div class="text__box">
+							<?php the_field('page_top_text'); ?>
+							<div class="content__bar">
+								<?php 
+									$link = get_field('page_top_button_link');
+									if( $link ) : 
+    									$link_url = $link['url'];
+    									$link_title = $link['title'];
+    									$link_target = $link['target'] ? $link['target'] : '_self'; ?>
+										<a class="bar__button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+									<?php endif;
+								?>
+								<?php
+									$show_phone_number = get_field('show_phone_number');
+									if( !empty(get_theme_mod('phone')) && $show_phone_number && in_array('yes', $show_phone_number) ) : ?>
+										<a href="tel:<?php echo get_theme_mod('phone'); ?>" class="bar__phone"><?php echo get_theme_mod('phone'); ?></a>
+									<?php endif;
+								?>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 content__image"><img src="<?php the_field('page_top_image'); ?>" alt="<?php $image_url = get_field('page_top_image'); $image_id = pippin_get_image_id($image_url); $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true ); echo $image_alt; ?>" class="content__image-image"></div>
+				</div>
+			</div>
+		</div>
 	</header>

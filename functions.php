@@ -61,3 +61,122 @@ function mob_biz_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'mob_biz_scripts' );
 
+/**
+ * Contact details
+ */
+function contact_details_section( $wp_customize ) {
+    $wp_customize->add_section( 'contact-details', array(
+       'title'=> __( 'Contact details', 'mob-biz' ),
+       'priority' => 20,
+    ) );
+	//Phone
+	$wp_customize->add_setting( 'phone' );
+    $wp_customize->add_control( 'phone', array(
+        'type'=> 'text',
+        'label' => __( 'Phone', 'mob-biz' ),
+        'section' => 'contact-details'
+    ) );
+}
+add_action( 'customize_register', 'contact_details_section' );
+
+/**
+ * Footer
+ */
+function footer_section( $wp_customize ) {
+    $wp_customize->add_section( 'footer', array(
+       'title'=> __( 'Footer', 'mob-biz' ),
+       'priority' => 20,
+    ) );
+	//Top text
+	$wp_customize->add_setting( 'footer_top_text' );
+    $wp_customize->add_control( 'footer_top_text', array(
+        'type'=> 'text',
+        'label' => __( 'Footer top text', 'mob-biz' ),
+        'section' => 'footer'
+    ) );
+	//Page author text
+	$wp_customize->add_setting( 'page_author_text' );
+    $wp_customize->add_control( 'page_author_text', array(
+        'type'=> 'text',
+        'label' => __( 'Page author text', 'mob-biz' ),
+        'section' => 'footer'
+    ) );
+}
+add_action( 'customize_register', 'footer_section' );
+
+/**
+ * Register post type
+ */
+function codex_custom_init() {
+	//Possibilities
+	$args = array(
+        'public'   => true,
+        'label'    => 'Possibilities',
+        'supports' => array( 'title' ),
+    );
+	register_post_type( 'possibilities', $args );
+	//Report
+	$args = array(
+        'public'   => true,
+        'label'    => 'Report',
+        'supports' => array( 'title' ),
+    );
+	register_post_type( 'report', $args );
+	//Service
+	$args = array(
+        'public'   => true,
+        'label'    => 'Service',
+        'supports' => array( 'title' ),
+    );
+	register_post_type( 'service', $args );
+	//Blog grid
+	$args = array(
+        'public'   => true,
+        'label'    => 'Blog grid',
+        'supports' => array( 'title' ),
+    );
+	register_post_type( 'blog-grid', $args );
+}
+add_action( 'init', 'codex_custom_init' );
+
+/*
+* Register shortcodes
+*/
+//Possibilities
+function possibilities_shortcode($attr) {
+	ob_start();
+	get_template_part( 'template-parts/content', 'possibilities' );
+	return ob_get_clean();
+}
+add_shortcode('possibilities', 'possibilities_shortcode');
+//Report
+function report_shortcode($attr) {
+	ob_start();
+	get_template_part( 'template-parts/content', 'report' );
+	return ob_get_clean();
+}
+add_shortcode('report', 'report_shortcode');
+//Service
+function service_shortcode($attr) {
+	ob_start();
+	get_template_part( 'template-parts/content', 'service' );
+	return ob_get_clean();
+}
+add_shortcode('service', 'service_shortcode');
+//Blog grid
+function blog_grid_shortcode($attr) {
+	ob_start();
+	get_template_part( 'template-parts/content', 'blog-grid' );
+	return ob_get_clean();
+}
+add_shortcode('blog_grid', 'blog_grid_shortcode');
+
+/*
+* Retrieves the attachment ID from the file URL
+*/
+function pippin_get_image_id($image_url) {
+    global $wpdb;
+    $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
+    return $attachment[0]; 
+}
+

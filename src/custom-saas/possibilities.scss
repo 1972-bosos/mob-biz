@@ -1,0 +1,17 @@
+.content__possibilities {
+    .possibilities__image {
+        .possibilities__image--img {}
+    }
+
+    .possibilities__text {
+        h2 {
+            margin-bottom: 18px;
+
+            .text-blue {
+                font-size: inherit;
+                font-weight: inherit;
+                color: $color06;
+            }
+        }
+    }
+}

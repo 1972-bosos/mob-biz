@@ -7,7 +7,7 @@ get_header(); ?>
 
 	<main class="content page__content">
 		<div class="container">
-			PAGE CONTENT
+			<?php the_content( ); ?>
 		</div>
 	</main>
 

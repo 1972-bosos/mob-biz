@@ -1,0 +1,93 @@
+.page__footer {
+    background: radial-gradient(45% 104.25% at 85.62% 105.07%, $color02 0%, $color04 100%), $color05;
+    padding: 70px 0 65px 0;
+
+    .footer__top {
+        border-bottom: 1px solid rgba($white, .4);
+        padding-bottom: 64px;
+
+        .logo {
+            .custom-logo-link {
+                .custom-logo {
+                    width: auto;
+                    height: 40px;
+                }
+            }
+
+            .footer-text {
+                width: 75%;
+                color: rgba($white, .72);
+                line-height: 1.429;
+                letter-spacing: 0.2px;
+                margin-top: 20px;
+            }
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .nav {
+                .menu-item {
+                    margin-right: 24px;
+
+                    a {
+                        font-size: 1.143rem;
+                        color: $white;
+                        letter-spacing: 0.2px;
+
+                        &:hover {
+                            color: $color06;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                .current-menu-item {
+                    a {
+                        color: rgba($color06, .75);
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__bottom {
+        margin-top: 64px;
+
+        .copyright {
+            span {
+                color: rgba($white, .72);
+                line-height: 1.429;
+                letter-spacing: 0.2px;
+                margin-right: 24px;
+            }
+
+            a {
+                color: rgba($white, .72);
+                line-height: 1.429;
+                letter-spacing: 0.2px;
+
+                &:hover {
+                    color: $color06;
+                }
+            }
+        }
+
+        .site-author {
+            display: flex;
+            justify-content: flex-end;
+
+            p {
+                color: rgba($white, .72);
+                line-height: 1.429;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+}

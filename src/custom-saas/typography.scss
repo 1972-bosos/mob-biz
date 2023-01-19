@@ -62,11 +62,29 @@ body {
     min-width: 320px;
 }
 
+h1 {
+    font-family: $Mulish;
+    font-size: 2.857rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $color05;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: $Mulish;
+    font-size: 2.286rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $color05;
+    margin-bottom: 0;
+}
+
 p {
     font-family: $Mulish;
     font-size: 1rem;
-    line-height: 1.429;
     font-weight: 400;
+    line-height: 1.429;
     color: $color07;
     margin-bottom: 0;
 }
@@ -74,8 +92,8 @@ p {
 a {
     font-family: $Mulish;
     font-size: 1rem;
-    line-height: 1.429;
     font-weight: 400;
+    line-height: 1.429;
     color: $color07;
     word-wrap: break-word;
     text-decoration: none;
@@ -86,4 +104,18 @@ a {
     }
 
     transition: color 0.33s;
+}
+
+span {
+    font-family: $Mulish;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.429;
+    color: $color07;
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
