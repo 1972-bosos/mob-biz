@@ -11,7 +11,7 @@
             <div class="row">
                 <!-- the loop -->
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                    <div class="col-4 data">
+                    <div class="col-lg-4 col-sm-6 px-5 data">
                         <span class="value" data-count="<?php the_field('report_value_integer'); ?>">0</span>
                         <?php if( get_field('report_value_separator') ): ?>
                             <?php if( get_field('report_value_separator') == 'comma' ): ?>

@@ -1,4 +1,4 @@
-.page__footer {
+.footer {
     background: radial-gradient(45% 104.25% at 85.62% 105.07%, $color02 0%, $color04 100%), $color05;
     padding: 70px 0 65px 0;
 
@@ -7,10 +7,32 @@
         padding-bottom: 64px;
 
         .logo {
-            .custom-logo-link {
-                .custom-logo {
-                    width: auto;
-                    height: 40px;
+
+            .logo--main-logo {
+                .custom-logo-link {
+                    .custom-logo {
+                        width: auto;
+                        height: 40px;
+                    }
+                }
+
+                @media (max-width: 991px) and (min-width: 576px) {
+                    display: none;
+                }
+            }
+
+            .logo--second-logo {
+                display: none;
+
+                .second-logo-link {
+                    .second-logo {
+                        width: auto;
+                        height: 40px;
+                    }
+                }
+
+                @media (max-width: 991px) and (min-width: 576px) {
+                    display: block;
                 }
             }
 
@@ -54,6 +76,16 @@
                     }
                 }
             }
+
+            @media (max-width: 767px) {
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 48px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding-bottom: 47px;
         }
     }
 
@@ -62,10 +94,19 @@
 
         .copyright {
             span {
+                display: inline-block;
                 color: rgba($white, .72);
                 line-height: 1.429;
                 letter-spacing: 0.2px;
                 margin-right: 24px;
+
+                @media (max-width: 991px) {
+                    margin: 0 0 8px 0;
+                }
+
+                @media (max-width: 767px) {
+                    display: block;
+                }
             }
 
             a {
@@ -87,7 +128,24 @@
                 color: rgba($white, .72);
                 line-height: 1.429;
                 letter-spacing: 0.2px;
+
+                @media (max-width: 1199px) {
+                    font-size: 0.929rem;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                }
             }
+
+            @media (max-width: 767px) {
+                justify-content: flex-start;
+                margin-top: 32px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 47px;
         }
     }
 }

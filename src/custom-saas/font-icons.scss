@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'mobbiz-font-icon';
+    src:
+        url('../font-icons/mobbiz-font-icon.ttf?u5qmve') format('truetype'),
+        url('../font-icons/mobbiz-font-icon.woff?u5qmve') format('woff'),
+        url('../font-icons/mobbiz-font-icon.svg?u5qmve#mobbiz-font-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+$iconArrow: "\e902";
+$iconClose: "\e900";
+$iconMenu: "\e901";

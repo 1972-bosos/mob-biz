@@ -17,9 +17,9 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div class="page">
-	<header class="header page__header">
-		<nav class="navbar navbar-expand-lg">
-  			<div class="container">
+	<header class="header">
+		<nav class="navbar navbar-expand-md">
+  			<div class="container" style="position: relative">
 			  	<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
     				<?php the_custom_logo(); ?>
 				<?php else : ?>
@@ -43,7 +43,7 @@
 		<div class="header__content">
 			<div class="container">
 				<div class="row">
-					<div class="col-6 content__text">
+					<div class="col-md-6 content__text">
 						<div class="text__box">
 							<?php the_field('page_top_text'); ?>
 							<div class="content__bar">
@@ -65,7 +65,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-6 content__image"><img src="<?php the_field('page_top_image'); ?>" alt="<?php $image_url = get_field('page_top_image'); $image_id = pippin_get_image_id($image_url); $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true ); echo $image_alt; ?>" class="content__image-image"></div>
+					<div class="col-md-6 content__image"><img src="<?php the_field('page_top_image'); ?>" alt="<?php $image_url = get_field('page_top_image'); $image_id = pippin_get_image_id($image_url); $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true ); echo $image_alt; ?>" class="content__image-image"></div>
 				</div>
 			</div>
 		</div>

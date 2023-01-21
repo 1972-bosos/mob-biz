@@ -1,5 +1,8 @@
-.content__possibilities {
+.possibilities {
     .possibilities__image {
+        @media (max-width: 767px) {
+            margin-top: 22px;
+        }
     }
 
     .possibilities__text {

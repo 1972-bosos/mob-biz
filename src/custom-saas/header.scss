@@ -1,4 +1,4 @@
-.page__header {
+.header {
     background: radial-gradient(35.21% 43.76% at 5.1% 7.01%, $color01 0%, $color02 0%, $color03 100%), radial-gradient(27.36% 45.53% at 90.42% 60.07%, $color02 0%, $color04 100%), $color05;
     padding-top: 28px;
 
@@ -13,9 +13,54 @@
             }
         }
 
-        .navbar-toggler {}
+        .navbar-toggler {
+            padding: 0;
+            border: none;
+            outline: none;
+            border-radius: unset;
 
-        .collapse {
+            .navbar-toggler-icon {
+                display: inline-block;
+                width: auto;
+                height: auto;
+                vertical-align: middle;
+                background-image: unset;
+                background-repeat: unset;
+                background-position: unset;
+                background-size: unset;
+
+                &::after {
+                    font-family: 'mobbiz-font-icon';
+                    content: $iconMenu;
+                    font-size: 30px;
+                    color: $white;
+                    transition: color 0.33s;
+                }
+            }
+
+            &:hover {
+                .navbar-toggler-icon {
+                    &::after {
+                        color: $color06;
+                    }
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .navbar-toggler[aria-expanded="true"] {
+            .navbar-toggler-icon {
+                &::after {
+                    font-family: 'mobbiz-font-icon';
+                    content: $iconClose;
+                }
+            }
+        }
+
+        .navbar-collapse {
             .navbar-nav {
                 .menu-item {
                     align-self: center;
@@ -33,6 +78,15 @@
                     &:last-child {
                         margin-right: 0;
                     }
+
+                    @media (max-width: 767px) {
+                        margin-right: 0;
+                    }
+
+                    @media (max-width: 767px) {
+                        line-height: 2.5;
+                        align-self: flex-start;
+                    }
                 }
 
                 .current-menu-item {
@@ -45,7 +99,7 @@
                 .link {
                     border: 1px solid $white;
                     padding: 10px 20px;
-                    margin-left: 50px;
+                    margin-left: clamp(30px, 2.604vw, 50px);
                     transition: background-color 0.33s;
 
                     a {
@@ -60,7 +114,24 @@
                     &:hover {
                         background-color: rgba($color06, .25);
                     }
+
+                    @media (max-width: 767px) {
+                        line-height: 1;
+                        border: 1px solid rgba($white, .5);
+                        padding: 0 5px;
+                        margin-left: 0;
+                    }
                 }
+            }
+
+            @media (max-width: 767px) {
+                position: absolute;
+                top: 40px;
+                right: 0;
+                z-index: 1;
+                background-color: $color05;
+                padding: 0 calc(var(--bs-gutter-x)*.5) 10px 10px;
+                box-shadow: inset 5px -5px 10px -5px rgba($color06, .25);
             }
         }
     }
@@ -71,11 +142,15 @@
 
             .text__box {
                 position: absolute;
-                bottom: 162px;
+                bottom: 8.438vw;
 
                 h1 {
                     color: $white;
                     margin-bottom: 16px;
+
+                    @media (max-width: 991px) {
+                        font-size: 2.071rem;
+                    }
                 }
 
                 p {
@@ -85,6 +160,14 @@
                     color: rgba($white, .72);
                     letter-spacing: 0.2px;
                     margin-bottom: 48px;
+
+                    @media (max-width: 991px) {
+                        width: 95%;
+                    }
+
+                    @media (max-width: 767px) {
+                        width: 100%;
+                    }
                 }
 
                 .content__bar {
@@ -113,12 +196,30 @@
                         }
                     }
                 }
+
+                @media (max-width: 991px) {
+                    bottom: 20px;
+                }
+
+                @media (max-width: 767px) {
+                    position: relative;
+                    bottom: unset;
+                }
             }
         }
 
         .content__image {
             display: flex;
             justify-content: flex-end;
+
+            @media (max-width: 767px) {
+                margin-top: 32px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding-top: 67px;
+            padding-bottom: 96px;
         }
     }
 }

@@ -186,3 +186,17 @@ function pippin_get_image_id($image_url) {
     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
     return $attachment[0]; 
 }
+
+/*
+* Second logo
+*/
+function second_logo_customize_register($wp_customize){
+	$wp_customize->add_setting('second_logo');
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'second_logo', array(
+    	'label'    => __('Second Logo', 'store-front'),
+    	'section'  => 'title_tagline',
+    	'settings' => 'second_logo',
+    	'priority' => 8,
+	)));
+}
+add_action('customize_register', 'second_logo_customize_register');

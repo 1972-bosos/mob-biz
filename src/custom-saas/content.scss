@@ -38,6 +38,12 @@
         }
     }
 
+    .wp-block-buttons {
+        @media (max-width: 767px) {
+            justify-content: flex-start !important;
+        }
+    }
+
     @import "possibilities";
     @import "report";
     @import "service";

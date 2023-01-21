@@ -25,11 +25,15 @@
                 color: $color05;
 
                 .arrow {
-                    font-size: inherit;
-                    font-weight: inherit;
-                    line-height: inherit;
-                    color: inherit;
-                    margin-left: 5px;
+                    &::after {
+                        font-family: 'mobbiz-font-icon';
+                        content: $iconArrow;
+                        font-size: inherit;
+                        font-weight: inherit;
+                        line-height: inherit;
+                        color: inherit;
+                        margin-left: 5px;
+                    }
                 }
 
                 &:hover {
@@ -38,5 +42,23 @@
                 }
             }
         }
+    }
+
+    .blog-box--home {
+        @media (max-width: 991px) {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .blog-box--blog {
+        @media (max-width: 991px) {
+            margin-top: clamp(30px, 6.054vw, 60px);
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-top: 12px;
     }
 }

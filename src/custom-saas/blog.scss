@@ -5,6 +5,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin: 30px 0;
+
+    @media (max-width: 991px) {
+        width: 50%;
+        height: 250px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+        height: clamp(240px, 47.588vw, 365px);
+    }
 }
 
 .post-date {

@@ -39,10 +39,18 @@
             overflow: hidden;
             margin-top: 11px;
         }
+
+        @media (max-width: 575px) {
+            margin-top: 24px;
+        }
     }
 
     .separate-line--report {
         margin: 48px 0;
+
+        @media (max-width: 575px) {
+            margin: 32px 0;
+        }
     }
 
     .content__additional-button {
@@ -52,5 +60,13 @@
         .button--report {
             width: 250px;
         }
+
+        @media (max-width: 575px) {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-bottom: 64px;
     }
 }

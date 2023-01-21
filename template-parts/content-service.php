@@ -11,7 +11,7 @@
             <div class="row">
                 <!-- the loop -->
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                    <div class="col-3 service-box">
+                    <div class="col-md-3 col-sm-6 service-box">
                         <?php if( get_field('service_icon') ): ?>
                             <img src="<?php the_field('service_icon'); ?>" alt="<?php $image_url = get_field('service_icon'); $image_id = pippin_get_image_id($image_url); $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true ); echo $image_alt; ?>">
                         <?php endif; ?>
