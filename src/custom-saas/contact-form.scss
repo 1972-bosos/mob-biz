@@ -1,0 +1,87 @@
+.wpcf7 {
+    .wpcf7-form {
+        p {
+            .wpcf7-form-control-wrap {
+                .wpcf7-form-control {
+                    width: 100%;
+                    line-height: 2;
+                    border: 1px solid $color07;
+                    border-radius: unset;
+                    outline: none;
+                    padding: 12px;
+                    margin-bottom: 20px;
+                }
+
+                .wpcf7-textarea {
+                    resize: none;
+                }
+
+                .wpcf7-acceptance {
+                    border: none;
+                    padding: 0;
+
+                    .wpcf7-list-item {
+                        margin-left: 0;
+
+                        label {
+                            display: flex;
+
+                            input[type="checkbox"] {
+                                width: 15px;
+                                height: 15px;
+                                align-self: center;
+                            }
+
+                            .wpcf7-list-item-label {
+                                font-size: 0.833rem;
+                                margin-left: 5px;
+
+                                a {
+                                    font-size: inherit;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .submit-button {
+            text-align: right;
+
+            p {
+                position: relative;
+
+                .wpcf7-form-control[type="submit"] {
+                    font-weight: 700;
+                    color: $white;
+                    text-transform: uppercase;
+                    background-color: $color06;
+                    padding: 10px 15px;
+                    border: none;
+                    border-radius: 0;
+                    transition: color 0.33s;
+
+                    &:hover {
+                        color: $color05;
+                    }
+                }
+
+                .wpcf7-form-control[type="submit"][disabled] {
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
+                .wpcf7-spinner {
+                    position: absolute;
+                    top: 11px;
+                    left: 0;
+                    background-color: $color06;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

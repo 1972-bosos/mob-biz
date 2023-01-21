@@ -133,7 +133,7 @@ function codex_custom_init() {
 	$args = array(
         'public'   => true,
         'label'    => 'Blog grid',
-        'supports' => array( 'title' ),
+        'supports' => array( 'title', "author" ),
     );
 	register_post_type( 'blog-grid', $args );
 }
@@ -170,6 +170,13 @@ function blog_grid_shortcode($attr) {
 	return ob_get_clean();
 }
 add_shortcode('blog_grid', 'blog_grid_shortcode');
+//Blog page
+function blog_page_shortcode($attr) {
+	ob_start();
+	get_template_part( 'template-parts/content', 'blog-page' );
+	return ob_get_clean();
+}
+add_shortcode('blog_page', 'blog_page_shortcode');
 
 /*
 * Retrieves the attachment ID from the file URL
@@ -179,4 +186,3 @@ function pippin_get_image_id($image_url) {
     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
     return $attachment[0]; 
 }
-

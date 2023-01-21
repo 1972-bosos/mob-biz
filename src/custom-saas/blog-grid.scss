@@ -1,1 +1,42 @@
-.content__blog-grid {}
+.blog-grid {
+    margin-top: 72px;
+
+    .blog-box {
+        .article-title {
+            height: 64px;
+            margin-top: 32px;
+        }
+
+        .date-read-more {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 15px;
+            margin-top: 16.5px;
+
+            .date {
+                color: $color08;
+                letter-spacing: 0.2px;
+            }
+
+            .read-more {
+                font-size: 1.143rem;
+                font-weight: 700;
+                line-height: 1.2;
+                color: $color05;
+
+                .arrow {
+                    font-size: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    color: inherit;
+                    margin-left: 5px;
+                }
+
+                &:hover {
+                    color: $color05;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

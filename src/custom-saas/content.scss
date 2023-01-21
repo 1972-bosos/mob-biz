@@ -1,5 +1,15 @@
-.page__content {
+.content {
     padding: 78px 0 100px 0;
+
+    .text-highlight {
+        font-size: inherit;
+        font-weight: inherit;
+        color: $color06;
+    }
+
+    .separate-line {
+        border-top: 1px solid rgba($white, .4);
+    }
 
     ul {
         list-style-type: none;
@@ -32,4 +42,6 @@
     @import "report";
     @import "service";
     @import "blog-grid";
+    @import "blog";
+    @import "contact-form";
 }

@@ -1,1 +1,56 @@
-.content__report {}
+.report {
+    background: radial-gradient(35.76% 44.26% at 5.1% 7.01%, $color01 0%, $color02 0%, $color04 100%), radial-gradient(45% 104.25% at 85.62% 105.07%, $color02 0%, $color04 100%), linear-gradient(0deg, $color05, $color05), $color05;
+    padding: 40px 0 72px 0;
+    margin-top: 72px;
+
+    .data {
+        margin-top: 32px;
+
+        .value {
+            position: relative;
+            font-family: $Mulish;
+            font-size: 1.714rem;
+            font-weight: 700;
+            line-height: 1.6;
+            color: $white;
+            margin: 0 -2px;
+
+            &::before {
+                position: absolute;
+                content: "•";
+                top: -6px;
+                left: -18px;
+                color: $color06;
+            }
+        }
+
+        .value--separator,
+        .value--decimal,
+        .value--unit {
+            &::before {
+                display: none;
+            }
+        }
+
+        .description {
+            height: 40px;
+            color: rgba($white, .8);
+            letter-spacing: 0.2px;
+            overflow: hidden;
+            margin-top: 11px;
+        }
+    }
+
+    .separate-line--report {
+        margin: 48px 0;
+    }
+
+    .content__additional-button {
+        display: flex;
+        justify-content: end;
+
+        .button--report {
+            width: 250px;
+        }
+    }
+}

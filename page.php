@@ -5,10 +5,8 @@
 
 get_header(); ?>
 
-	<main class="content page__content">
-		<div class="container">
+	<main class="content">
 			<?php the_content( ); ?>
-		</div>
 	</main>
 
 <?php get_footer();

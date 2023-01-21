@@ -1,10 +1,7 @@
 <!-- the query -->
 <?php
     $args = array(
-		'post_type'      => 'blog-grid',
-        'posts_per_page' => 3,
-        'orderby'        => 'date',
-        'order'          => 'ASC',
+		'post_type' => 'blog-grid',
     );
 	$the_query = new WP_Query( $args );
 ?>

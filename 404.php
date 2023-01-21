@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-	<main class="content page__content">
+	<main class="content">
 		<section class="error-404 not-found">
 			<div class="page-content">
 				<div class="container">

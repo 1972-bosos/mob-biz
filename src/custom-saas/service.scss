@@ -1,1 +1,12 @@
-.content__service {}
+.service {
+    margin-top: 16px;
+
+    .service-box {
+        text-align: center;
+        margin-top: 48px;
+
+        .service-name {
+            margin: 16px 0 8px 0;
+        }
+    }
+}
